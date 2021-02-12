@@ -1,5 +1,6 @@
-<h1>Members of <%= "#{@search_nation}: #{@characters.count}" %></h1>
+<h1>Members of <%= "#{@search_nation.titleize}: #{@characters.count}" %></h1>
 
-<%= render @characters[0..24] %>
-
-
+<section class='character-list'>
+<h2>First 25 Affiliated Characters</h2>
+<%= render partial: 'character', collection: @characters[0..24] %>
+</section>
